@@ -1,0 +1,22 @@
+.active-item {
+    background-color: #007bff;
+}
+
+.wrapper {
+    width: 800px;
+    height: 500px;
+    border: #000 solid 2px;
+    margin: auto;
+}
+
+.list-group-item {
+    text-align:  center;
+}
+
+.list-option {
+    text-align:  center;
+}
+
+.row {
+    margin: 20px;
+}
