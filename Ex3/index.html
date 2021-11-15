@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous" />
+	<title>Chat</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous" />
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="row">
+            <!-- chat 1 -->
+			<div class="col-sm-6">
+				<section class="messager frame-1">
+					<header class="messager-header">
+						<div class="messager-header-title">
+							<img class="avatar-head" src="./img/anh.jpg" alt=""> Hoàng
+						</div>
+					</header>
+					<main id="msg-chat-left" class="messager-chat">
+						
+					</main>
+					<div class="list-btn">
+						<button class="btn btn-bold">Đậm</button>
+						<button class="btn btn-italic">Nghiêng</button>
+						<button id="btn-reset-left" class="btn btn-reset">Reset</button>
+					</div>
+					<div class="container">
+						<div class="row messager-inputarea">
+							<div id="btn-input-left" contenteditable="true" class="messager-input col-sm-9" spellcheck="false"></div>
+							<button id="btn-send-left" type="submit" class="messager-send-btn col-sm-2">Send</button>
+						</div>
+					</div>
+				</section>
+			</div>
+			<!-- chat 2 -->
+			<div class="col-sm-6">
+				<section class="messager frame-1">
+					<header class="messager-header">
+						<div class="messager-header-title">
+							<img class="avatar-head" src="./img/anh.jpg" alt=""> Thái
+						</div>
+					</header>
+					<main  id="msg-chat-right" class="messager-chat">
+
+					</main>
+					<div class="list-btn">
+						<button class="btn btn-bold">Đậm</button>
+						<button class="btn btn-italic">Nghiêng</button>
+						<button id="btn-reset-right" class="btn btn-reset">Reset</button>
+					</div>
+					<div class="container">
+						<div class="row messager-inputarea">
+							<div id="btn-input-right" contenteditable="true" class="messager-input col-sm-9" spellcheck="false"></div>
+							<button id="btn-send-right" type="submit" class="messager-send-btn col-sm-2">Send</button>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="./js/script.js"></script>
+</body>
+</html>
