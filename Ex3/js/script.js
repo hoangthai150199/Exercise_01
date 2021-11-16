@@ -22,44 +22,45 @@ window.addEventListener('load', function() {
     });
 
     btnSendLeft.addEventListener('click', function() {
-        var inputLeft = document.querySelector('#btn-input-left');
-        var e1 = document.createElement('div');
-        e1.classList.add('col-sm-11');
-        var msgContent = inputLeft.innerHTML
-        e1.innerHTML = `
-            <div class="msg msg-left">
-                ${msgContent}
-            </div>`;
-        document.querySelector('#msg-chat-left').appendChild(e1);   
-        var e2 = document.createElement('div');
-        e2.classList.add('col-sm-11');
-        var msgContent = inputLeft.innerHTML
-        e2.innerHTML = `
-            <div class="msg msg-right">
-                ${msgContent}
-            </div>`;
-        document.querySelector('#msg-chat-right').appendChild(e2);
+        const inputLeft = document.querySelector('#btn-input-left');
+        var btnLeft = 0;
+        btnChatCommon(inputLeft, btnLeft)
     })
 
     btnSendRight.addEventListener('click', function() {
-        var inputRight = document.querySelector('#btn-input-right');
-        var e1 = document.createElement('div');
+        const inputRight = document.querySelector('#btn-input-right');
+        var btnRight = 1;
+        btnChatCommon(inputRight, btnRight)
+    })
+
+    function btnChatCommon(input, leftOrRight) {
+        const e1 = document.createElement('div');
         e1.classList.add('col-sm-11');
-        var msgContent = inputRight.innerHTML
+        var msgContent = input.innerHTML
         e1.innerHTML = `
             <div class="msg msg-left">
                 ${msgContent}
             </div>`;
-        document.querySelector('#msg-chat-right').appendChild(e1);
+        if(leftOrRight == 1) {
+                document.querySelector('#msg-chat-right').appendChild(e1);
+            }
+        else {
+                document.querySelector('#msg-chat-left').appendChild(e1);
+            }
         var e2 = document.createElement('div');
         e2.classList.add('col-sm-11');
-        var msgContent = inputRight.innerHTML
+        var msgContent = input.innerHTML
         e2.innerHTML = `
             <div class="msg msg-right">
                 ${msgContent}
             </div>`;
-        document.querySelector('#msg-chat-left').appendChild(e2);
-    })
+            if(leftOrRight == 1) {
+                document.querySelector('#msg-chat-left').appendChild(e2);
+            }
+        else {
+                document.querySelector('#msg-chat-right').appendChild(e2);
+            }
+    }
     document.querySelector('#btn-reset-left').addEventListener('click', function() {
         document.querySelector('#btn-input-left').innerHTML = '';
     })
