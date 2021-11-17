@@ -1,31 +1,32 @@
 const selectElement = document.querySelector('#exampleFormControlSelect1');
 selectElement.onchange = function(event){
-    let valueSelected = event.target.value;
-    let liElements = document.querySelectorAll('li');
+    const valueSelected = event.target.value;
+    const liElements = document.querySelectorAll('li');
 
+    // Reset all item's active
     for(let i = 0; i < liElements.length; i++) {
         liElements[i].classList.remove('active-item')
     }
-    if (valueSelected == 'reset' || valueSelected == 'select') {
-        for(let i = 0; i < liElements.length; i++) {
-            liElements[i].classList.remove('active-item')
+
+    for(let i = 0; i < liElements.length; i++) {
+        switch (valueSelected) {
+            case 'reset':
+            case 'select':
+                liElements[i].classList.remove('active-item');
+                break;
+            case 'even':
+                if(i%2 !== 0) {
+                    liElements[i].classList.add('active-item')
+                }
+                break;
+            case 'odd':
+                if(i%2 === 0) {
+                    liElements[i].classList.add('active-item');
+                }
+                break;
+            default:
+                liElements[+valueSelected - 1].classList.add('active-item');
+                break;
         }
-    }
-    else if(valueSelected === 'even') {
-        for(let i = 0; i < liElements.length; i++) {
-            if(i%2 === 1) {
-                liElements[i].classList.add('active-item')
-            }
-        }
-    }
-    else if (valueSelected == 'odd') {
-        for(let i = 0; i < liElements.length; i++) {
-            if(i%2 === 0) {
-                liElements[i].classList.add('active-item')
-            }
-        }
-    }
-    else {
-        liElements[+valueSelected - 1].classList.add('active-item')
     }
 }
