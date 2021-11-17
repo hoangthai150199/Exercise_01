@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validate</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous" />
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="wrapper">            
+            <form id="form-1">
+                <div class="form-group row">
+                    <label for="fullname" class="col-sm-2 col-form-label">Full name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control " id="fullname">
+                        <span class="form-message"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email">
+                        <span class="form-message"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="phone" class="col-sm-2 col-form-label">Phone</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="phone">
+                        <span class="form-message"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="birthday" class="col-sm-2 col-form-label">Birthday</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" id="birthday">
+                        <span class="form-message"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="password" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="password">
+                        <span class="form-message"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="confirmpassword" class="col-sm-2 col-form-label">Confirm password</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="confirmpassword">
+                        <span class="form-message"></span>
+                    </div>
+                </div>
+                <div class="avatar">
+                    <input id="btn-upload" type="file">
+                    <img src="" alt="" class="img-preview image-cover avatar-image">
+                    <label for="btn-upload" class="icon-upload">Avatar upload</label>
+                </div>
+                <div class="form-group row text-center">
+                    <div class="col-sm-6">
+                        <button type="submit" class="btn-submit btn btn-primary w-25 py-2 bg-success border-0">Add</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button class="btn-reset btn btn-primary w-25 py-2 bg-secondary border-0">Reset</button>
+                    </div>                   
+                </div>
+            </form>
+            <div class="profile p-4 pb-3 border border-success mt-5">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="row mb-2">
+                            <div class="col-sm-3 font-weight-bold">Full Name:</div>
+                            <div class="col-sm-9 fullname"></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-sm-3 font-weight-bold">Email:</div>
+                            <div class="col-sm-9 email"></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-sm-3 font-weight-bold">Phone:</div>
+                            <div class="col-sm-9 phone"></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-sm-3 font-weight-bold">Birthday:</div>
+                            <div class="col-sm-9 birthday"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="avatar-center avatar">
+                            <img  alt="" class="img-added image-cover avatar-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script src="./js/script.js"></script>
+</body>
+</html>
