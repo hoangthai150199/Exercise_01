@@ -1,5 +1,6 @@
 .wrapper {
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     height: 500px;
     border: #000 solid 2px;
     margin: auto;
@@ -8,4 +9,16 @@
 .col {
     width: 25%;
     text-align: center;
+}
+
+td {
+    border: 2px;
+}
+
+.invalid {
+    border: solid 1px red;
+}
+
+.valid {
+    border: solid 1px green;
 }
