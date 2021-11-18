@@ -1,0 +1,20 @@
+.wrapper {
+    margin: auto;
+}
+
+.col {
+    width: 25%;
+    text-align: center;
+}
+
+td {
+    border: 2px;
+}
+
+.invalid {
+    border: solid 1px red;
+}
+
+.valid {
+    border: solid 1px green;
+}
